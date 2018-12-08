@@ -229,6 +229,8 @@ def C_R(fname, inputFunctionHandle, I, cycleNo, noCycles, currentNo, noCurrents,
     
     if noCurrents > 1 and currentNo != C_R.lastCurrentNo and cycleNo == noCycles:
         C_R.lastCurrentNo = currentNo
+
+
         noColors = noCurrents
         col = currentNo * 0.75 / noColors;  # alter R and G from 0 to 0.75 for subsequent plots (shades of blue)
     

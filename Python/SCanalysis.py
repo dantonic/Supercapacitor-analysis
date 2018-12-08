@@ -444,21 +444,25 @@ def SCanalysis(Ur, I, m, S, text1, text2, text3, text4, text5, files, dataFunct,
             if noCurrents > 1:
                plt.close(h)
 
-    # Cumulative discharge plot
-    plt.figure(num = C_R.C_R.dischargeIplot.number)
-    plt.legend(loc='upper right')
-    plt.savefig(fname = "_discharge_I_" + fileSuffix, dpi = 300)
+        # Cumulative discharge plot
+        plt.figure(num = C_R.C_R.dischargeIplot.number)
+        plt.legend(loc='upper right')
+        plt.savefig(fname = "_discharge_I_", dpi = 300)
 
 
     plt.show()      # display all figures
         
 
+# SAMPLE CALLS
 #os.chdir(r"D:\Projekti\FKIT\Superkondenzator\Testiranje\Suzana mjerenja\1012")
-#SCanalysis(2.7, 22.1, 0.5, 2, "Line 1", "Line 2", "Line 3", "Line 4", "Line 5", "1012KRONO2_*.oxw", "readFunctions.readAL", [1,2], [0.9,0.7], 50, 50)
-
-os.chdir(r"D:\Projekti\FKIT\Superkondenzator\Testiranje\Suzana mjerenja\Strujni testovi")
-SCanalysis(2.7, (8, 9.8, 12, 14.7, 18.1, 22.1, 27.1, 33.3, 40.8, 50), 0.5, 2, \
-    "Line 1", "Line 2", "Line 3", "Line 4", "Line 5", \
-    ("008_0mA_*.oxw", "009_8mA_*.oxw", "012_0mA_*.oxw", "014_7mA_*.oxw", "018_1mA_*.oxw", \
-    "022_1mA_*.oxw", "027_1mA_*.oxw", "033_3mA_*.oxw", "040_8mA_*.oxw", "050_0mA_*.oxw", "nakon_*.oxw"), \
-    "readFunctions.readAL", [1,2], [0.9,0.7], 1, 1)
+#SCanalysis(2.7,22.1,6.9,2,"label1","label2","label3","label4","label5", "1012KRONO2_*.oxw", \
+#    "readFunctions.readAL",(1,1),(0.9,0.7),10,20)
+#os.chdir(r"D:\Projekti\FKIT\Superkondenzator\Testiranje\Suzana mjerenja\2017-02 Ljubljana")
+#SCanalysis(2.7,20,27.7,2,"80% AC, 10% CB, 10% PVDF", "80oC / 5MPa press", "115um thickness", \
+#    "packed in glove box", "", "*KRONO2*.oxw", "readFunctions.readAL", (0.9,0.7), (0.9,0.7), 10, 50)
+#os.chdir(r"D:\Projekti\FKIT\Superkondenzator\Testiranje\Suzana mjerenja\Strujni testovi")
+#SCanalysis(2.7, (8, 9.8, 12, 14.7, 18.1, 22.1, 27.1, 33.3, 40.8, 50), 10, 2, \
+#    "Line 1", "Line 2", "Line 3", "Line 4", "Line 5", \
+#    ("008_0mA_*.oxw", "009_8mA_*.oxw", "012_0mA_*.oxw", "014_7mA_*.oxw", "018_1mA_*.oxw", \
+#    "022_1mA_*.oxw", "027_1mA_*.oxw", "033_3mA_*.oxw", "040_8mA_*.oxw", "050_0mA_*.oxw", "nakon_*.oxw"), \
+#    "readFunctions.readAL", (1,1), (0.9,0.7), 1, 1)
